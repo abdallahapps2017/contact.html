@@ -39,3 +39,116 @@
     "block" !== e.style.display ? e.style.display = "block" : e.style.display = "none";
   };
 </script>
+<style>
+.search-sosprofil {
+  position: relative;
+  width: 250px;
+  float:left;
+top: 10px;
+}
+
+#search-box {
+  width: 100%;
+  padding-right: 38px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#search-box form {
+  position: absolute;
+  top: 0;
+  right: 38px;
+  display: block;
+  height: 30px;
+  padding: 0;
+  margin: 0px;
+  border: 1px solid #dedede;
+  border-radius: 3px;
+  line-height: 30px;
+  background: #fff;
+}
+
+#search-form,
+.search-button {
+  border: none!important;
+  line-height: 28px
+}
+
+#search-form {
+  color: gray;
+  width: 100%;
+  padding: 0 30px 0 10px;
+  height: 28px;
+  font-size: 14px;
+  margin: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.search-button {
+  padding: 0 10px;
+  text-align: center;
+  margin: 0;
+  top: 1px;
+  right: 1px;
+  font-size: 16px;
+  color: #888;
+  position: absolute;
+  background: none;
+  cursor: pointer;
+}
+
+#search-form:focus,
+#search-form:hover,
+.search-button:focus,
+.search-button:hover {
+  border: none;
+  outline: 0;
+  color: #000
+}
+
+.sos-profil {
+  position: relative;
+  top: 2px;
+  right: 38px;
+}
+
+.sos-profil ul {
+  padding: 0!important;
+  margin: 0!important;
+}
+
+.sos-profil li {
+  display: inline-block;
+  margin-left: 5px
+}
+
+.sos-profil a {
+  color: #555;
+  font-weight: 500;
+  font-size: 24px
+}
+
+.sos-profil a:hover {
+  color: #000!important
+}
+
+#search-box,
+#close-icon {
+  display: none;
+}
+
+.search-icon {
+  color: #555;
+  float: left;
+  cursor: pointer;
+margin-top: -8%;
+}
+
+.search-icon .fa-search,
+.search-icon .fa-times {
+  color: #fff;
+}
+</style>
