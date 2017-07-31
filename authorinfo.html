@@ -1,17 +1,159 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>about-author</title>
-<link href='//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css' rel='stylesheet'/>
-<script src='https://code.jquery.com/jquery-1.12.0.min.js'/>  
-<link crossorigin='anonymous' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css' integrity='sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7' rel='stylesheet'/>
-<link crossorigin='anonymous' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css' integrity='sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r' rel='stylesheet'/>
-<script src='//cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.5.1/jquery.nicescroll.min.js'/>
-<script crossorigin='anonymous' integrity='sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS' src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'/>
-<link href='//cdn.rawgit.com/morteza/bootstrap-rtl/master/dist/cdnjs/3.3.1/css/bootstrap-rtl.min.css' rel='stylesheet'/>
+<meta charset="utf-8">
+<title>Facebook Like Box</title>
+<meta content='width=device-width, initial-scale=1' name='viewport'>
+<style>
+body {
+  background-color:transparent;
+  margin:0;
+  padding:0;
+}
+iframe{border:0}
+/*الكاتب*/
+.prof-sm {
+    position: absolute;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    top: 80px;
+    right: 100px;
+    width: 40px;
+}
+.prof-sm .sm {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 4px;
+    border-radius: 50%;
+    background: #F1F1F1;
+    transition: all 0.15s ease-in-out;
+    border: 4px solid #fff;
+}
+.prof-sm a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+.prof-sm svg {
+    width: 25px;
+    height: 25px;
+    margin: 3px 2px 0 0;
+    border-radius: 50%;
+}
+.prof-sm path {
+    fill: #696969;
+}
+.fa-envelope2::before{content:"\f0e0";font-family: fontawesome;margin-left: 5px;width: 20px;height: 20px;color: #444;border-radius: 10px 2px 2px 10px;line-height:30px;text-align: center;font-size: 14px;margin-top: 2px;}
+.btn-success-abdallah:hover{color: #555;}
+.btn-success-abdallah{ opacity: 0.8;
+    color: #444;
+    display: block;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 30px;
+    width: 110px;
+    border-radius: 4px;
+    white-space: inherit;
+    border: 1px solid #ddd;
+    height: 45px;
+        margin: 0px auto 10px auto;}
+.verified {
+    height: 24px;
+    right: 30px;
+    position: absolute;
+    line-height: 20px !important;
+    text-align: center;
+    width: 24px;top: 0px;
+}
+.outer {
+      width: 25px;
+    height: 25px;
+    border-radius: 20px !important;
+    display: block;
+    background: rgb(31, 154, 74) none repeat scroll 0% 0% !important;
+    border: 4px solid #FFF;
+    font-size: 25px;
+    line-height: 24px !important;
+    text-align: center;
+}
+.fa-stack-1x, .fa-stack-2x {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    text-align: center;line-height: 10px;
+}
+.fa-check:before {
+content: "\f00c";
+    font-size: 11px;
+    color: white;
+}
+.rating {
+    font-size: 18px;
+    margin-top: 15px;
+}
+.pointer {
+    cursor: pointer;
+}
+.fa.active {
+    color: #FF7300;
+}
+.fa-star:before {
+    content: "\f005";
+}
+ .about-author {
+        position: relative;
+        margin-bottom: 0px;
+        padding: 30px;
+        background-color: #fff;
+  		  background: #fff;
+  -moz-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.01), 0 3px 5px rgba(0, 0, 0, 0.03);
+  -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.01), 0 3px 5px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.01), 0 3px 5px rgba(0, 0, 0, 0.03);
+  border-bottom: 1px solid #e4e4e4;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      }
+      .about-author .image-thumb {
+        width: 120px;float: right;
+      
+      }
+.fl {
+    float: right;
+}
+.about-author .image-thumb img{height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    border: 4px solid #FFF;
+    background: #eee;
+    display: inline-block;
+    box-shadow: 0 0.5px 1px rgba(0, 0, 0, 0.24), 0 0.5px 2px rgba(0, 0, 0, 0.12);}
+      .about-author .author-name h1 {
+ color: #756969;
+    font-weight: normal;
+    font-size: 15pt;
+        margin-top: 10px;
+      }
+   .about-author .author-name h4 {
+    display: block;
+    color: rgba(0, 0, 0, 0.34);
+    font-weight: normal;
+    font-size: 9pt;
+      }
+</style>
+<script>
+function getQueryVariable(variable) {
+	var query = window.location.search.substring(1);
+	var vars = query.split("&");
+	for (var i=0;i<vars.length;i++) {
+		var pair = vars[i].split("=");
+		if(pair[0] == variable){return pair[1];}
+	}
+	return(false);
+}
+var pages = getQueryVariable("page");
+</script>
 </head>
-
 <body>
   <div class='about-author'>
 <div class='row'>
@@ -58,5 +200,4 @@
     </div>
                          </div> </div>
 </body>
-
 </html>
