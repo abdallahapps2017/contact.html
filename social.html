@@ -5,10 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Bootstrap 101 Template</title>
-
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <title>social</title>
 <style>
 body {
   background-color:transparent;
@@ -143,6 +140,19 @@ function getQueryVariable(variable) {
 }
 var pages = getQueryVariable("page");
 </script>
+	  
+	  <script>
+	    function openSosprofil() {
+    var e = document.getElementById("sos-profil");
+    "none" !== e.style.display ? e.style.display = "none" : e.style.display = "block";
+    var e = document.getElementById("search-box");
+    "block" !== e.style.display ? e.style.display = "block" : e.style.display = "none";
+    var e = document.getElementById("search-icon");
+    "none" !== e.style.display ? e.style.display = "none" : e.style.display = "block";
+    var e = document.getElementById("close-icon");
+    "block" !== e.style.display ? e.style.display = "block" : e.style.display = "none";
+  };
+	  </script>
   </head>
   <body>
      <div class='search-sosprofil'>
@@ -174,21 +184,5 @@ var pages = getQueryVariable("page");
   </div>
 
 </div>
-	  <script>
-	    function openSosprofil() {
-    var e = document.getElementById("sos-profil");
-    "none" !== e.style.display ? e.style.display = "none" : e.style.display = "block";
-    var e = document.getElementById("search-box");
-    "block" !== e.style.display ? e.style.display = "block" : e.style.display = "none";
-    var e = document.getElementById("search-icon");
-    "none" !== e.style.display ? e.style.display = "none" : e.style.display = "block";
-    var e = document.getElementById("close-icon");
-    "block" !== e.style.display ? e.style.display = "block" : e.style.display = "none";
-  };
-	  </script>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
   </body>
 </html>
