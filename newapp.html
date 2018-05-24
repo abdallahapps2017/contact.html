@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>add app</title>
+<style>
+.appinputpage {
+    width: 99%;
+    height: 20px;
+    padding: 10px 5px;
+    float: right;
+    font-family: &quot;
+    border: 1px solid #f0f0f0;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    background: #f0f0f0;
+}
+</style>
+
+<script type='text/javascript'>
+//<![CDATA[
+$ ->
+  # Create clones of forms to 
+  # add more than one input
+  $('#add_another').click (event)->
+   event.preventDefault()
+   $('.field').last().clone().appendTo('form').find('[name*="field"]').val("").first().focus()
+
+  # Handle the form submit event
+  $('form').submit ->
+   
+   $fields = $('.field')
+   content = ""
+
+   if $fields.length
+    
+    output = []
+
+    $fields.each ()->
+     
+     $this = $(this)
+
+     obj = {}
+
+     obj.apptitlevistor  = $this.find('[name="field_apptitlevistor[]"]').val()
+     obj.iconapp  = $this.find('[name="field_iconapp[]"]').val()
+     obj.authorapp  = $this.find('[name="field_authorapp[]"]').val()
+     obj.versionapp  = $this.find('[name="field_versionapp[]"]').val()
+     obj.publishdate  = $this.find('[name="field_publishdate[]"]').val()
+     obj.description  = $this.find('[name="field_description[]"]').val()
+     obj.linkdownload = $this.find('[name="field_linkdownload[]"]').val()
+     obj.sizeapp = $this.find('[name="field_sizeapp[]"]').val()
+     obj.firstimgapp = $this.find('[name="field_firstimgapp[]"]').val()
+     obj.secimgapp = $this.find('[name="field_secimgapp[]"]').val()
+     obj.thrimgapp = $this.find('[name="field_thrimgapp[]"]').val()
+     obj.fourimgapp = $this.find('[name="field_fourimgapp[]"]').val()
+     obj.fiveimgapp = $this.find('[name="field_fiveimgapp[]"]').val()
+     obj.category = $this.find('[name="field_category[]"]').val()
+     obj.googlepaly = $this.find('[name="field_googlepaly[]"]').val()
+     obj.requirement = $this.find('[name="field_requirement[]"]').val()
+
+     output.push(obj)
+
+    if output.length
+
+     for item in output
+      content += "<div class='all_page_app'>\n"
+      content += "<div class='row'>\n"
+      content += "<div class='header_app'>\n"
+      content += "<div class='icon_app'>\n"
+      content += "<img src='#{item.iconapp}'/>\n"
+
+      content += "</div>\n"
+      content += "<div class='info_app'>\n"
+      content += "<div class='title_app'>\n"
+      content += "<h1>#{item.apptitlevistor}</h1>\n"
+      content += "</div>\n"
+      content += "<div class='share_app'>\n"
+      content += "<div class='addthis_inline_share_toolbox'>\n"
+      content += "</div>\n"
+      content += "</div>\n"
+      content += "<div class='about_app'>\n"
+      content += "<div class='author'>\n"
+      content += "<span>المؤلف:</span>\n"
+      content += "<br/>\n"
+      content += "<span>#{item.authorapp}</span>\n"
+
+      content += "</div>\n"
+      content += "<div class='version'>\n"
+      content += "<span>اصدار التطبيق:</span>\n"
+      content += "<br/>\n"
+      content += "<span>#{item.versionapp}</span>\n"
+      content += "</div>\n"
+      content += "<div class='Publish_Date'>\n"
+      content += "<span>تاريخ النشر:</span>\n"
+      content += "<br/>\n"
+      content += "<span>#{item.publishdate}</span>\n"
+      content += "</div>\n"
+
+      content += "</div>\n"
+      content += "</div>\n"
+
+      content += "</div>\n"
+      content += "</div>\n"
+      content += "<div class='row'>\n"
+      content += "<div class='hrdiv'></div>\n"
+      content += "<div class='ads-bottom-btn'></div>\n"
+      content += "</div>\n"
+      content += "<div class='row'>\n"
+      content += "<div class='hrdiv'></div>\n"
+      content += "<div class='download_btn'>\n"
+      content += "<a class='fa-icon-cloud-download' href='#{item.linkdownload}'><span>تحميل APK</span> <span class='fsize'>(#{item.sizeapp})</span></a>\n"
+      content += "<p class='fa-icon-check-sign'>تم التحقق من سلامة التطبيق قبل رفعه عن طريق أدارة الموقع.</p>\n"
+      content += "</div>\n"
+      content += "</div>\n"
+      content += "<div class='row'>\n"
+      content += "<div class='img_scroll'>
+<ul>
+<li>
+<a href='#'><img src='#{item.firstimgapp}'/></a>
+<a href='#'><img src='#{item.secimgapp}'/></a>
+<a href='#'><img src='#{item.thrimgapp}'/></a>
+<a href='#'><img src='#{item.fourimgapp}'/></a>
+<a href='#'><img src='#{item.fiveimgapp}'/></a>
+</li>
+</ul>
+</div>\n"
+      content += "</div>\n"
+      content += "<div class='row'>\n"
+      content += "<div class='hrdiv'></div>\n"
+      content += "<div class='ads-bottom-btn'></div>\n"
+      content += "</div>\n"
+      content += "<div class='row'>\n"
+      content += "<div class='hrdiv'></div>\n"
+      content += "<h1><span>وصف حول تطبيق #{item.apptitlevistor}</span></h1>\n"
+      content += "<div class='boxmoreandless'>\n"
+      content += "<p>#{item.description}</p>\n"
+      content += "</div>\n"
+      content += "<button class='purgex'>عرض المزيد</button>\n"
+
+      content += "</div>\n"
+      content += "<div class='row'>\n"
+      content += "<div class='hrdiv'></div>\n"
+      content += "<div class='some_about_app_get'>\n"
+      content += "<div class='col-md-3'>
+ <span>الفئة:</span>
+ <br/>
+ <span>#{item.category}</span>
+ </div>\n"
+      content += "<div class='col-md-3'>
+ <span>احصل علية من:</span>
+ <br/>
+ <span><a href='#{item.googlepaly}'><img src='https://3.bp.blogspot.com/-5NijnRMa3xA/WwbmKR1ZRzI/AAAAAAAAKRw/8N1NBubFREAlWuGdA4Sm7rHlzSUIZ7FjwCLcBGAs/s1600/gp_logo.png'/></a></span>
+ </div>\n"
+      content += "<div class='col-md-3'>
+ <span>المتطلبات :</span>
+ <br/>
+ <span>#{item.requirement}</span>
+ </div>\n"
+      content += "<div class='col-md-3'>
+ <span>ابلاغ:</span>
+ <br/>
+ <span><a href='http://apps.tegeek.com/p/report.html'>عن مشكلة او عطل</a></span>
+ </div>\n"
+
+      content += "</div>\n"
+      content += "</div>\n"
+      content += "<div class='space_app'></div>\n"
+      content += "<div class='row'>\n"
+      content += "<div class='ads-bottom-btn'></div>\n"
+      content += "</div>\n"
+      content += "<div class='space_app'></div>\n"
+      content += "</div>\n"
+
+    $('pre').text(content).html()
+
+   false
+//]]>
+    </script>
+</head>
+<body>
+<form action="#" method="post">
+ 
+ <div class="field">
+    <input class='appinputpage' type="text" name="field_apptitlevistor[]" placeholder="اسم التطبيق كما يظهر للزائر">
+<br/>
+        <br/>
+    <input class='appinputpage' type="text" name="field_iconapp[]" placeholder="ايقونة التطيق">
+<br/>
+        <br/>
+    <input class='appinputpage' type="text" name="field_authorapp[]" placeholder="صانع التطبيق">
+<br/>
+        <br/>
+    <input class='appinputpage' type="text" name="field_versionapp[]" placeholder="رقم اصدار التطبيق">
+    <br/>
+        <br/>
+<input class='appinputpage' type="text" name="field_publishdate[]" placeholder="تاريخ نشر التطبيق">
+                    <br/>     
+        <br/>
+<input class='appinputpage' type="text" name="field_linkdownload[]" placeholder="رابط تحميل التطبيق">
+            <br/>   
+        <br/>
+        <input class='appinputpage' type="text" name="field_sizeapp[]" placeholder="حجم التطبيق">
+<br/>
+                    <br/>     
+        <input class='appinputpage' type="text" name="field_firstimgapp[]" placeholder="صورة رقم 1">
+<br/>
+                    <br/>     
+        <input class='appinputpage' type="text" name="field_secimgapp[]" placeholder="صورة رقم 2">
+<br/>
+                    <br/>     
+        <input class='appinputpage' type="text" name="field_thrimgapp[]" placeholder="صورة رقم 3">
+<br/>
+                    <br/>     
+        <input class='appinputpage' type="text" name="field_fourimgapp[]" placeholder="صورة رقم 4">
+<br/>
+                    <br/>     
+        <input class='appinputpage' type="text" name="field_fiveimgapp[]" placeholder="صورة رقم5">
+                            <br/>
+        <br/>
+                <input class='appinputpage' type="text" name="field_category[]" placeholder="قسم التطبيق">
+                                    <br/>
+        <br/>
+                <input type="text" name="field_googlepaly[]" placeholder="رابط التطبيق على جوجل بلاي">
+                                            <br/>
+        <br/>
+                <input class='appinputpage' type="text" name="field_requirement[]" placeholder="متطلبات التطبيق">
+        <br/>
+        <br/>
+        <textarea class='appinputpage' type="text" name="field_description[]" placeholder="وصف التطبيق"></textarea>
+         </div>
+
+<button id="submit">عرض الكود</button>
+</form>
+
+<h1>الكود النهائي</h1>
+<pre></pre>
+</body>
+</html>
