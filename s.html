@@ -1,4 +1,5 @@
  <style>
+body{margin:0;padding:0;font-family: "Ta3alamFont";}
   /*-------------------- font --------------------*/
 @font-face {
 font-family: "Ta3alamFont";
@@ -10,7 +11,6 @@ url(https://dl.dropboxusercontent.com/s/gjkkuvnfze5ii1l/Ta3alamFont.woff) format
 url(https://dl.dropboxusercontent.com/s/mjj8mvkq7jgihhn/Ta3alamFont.ttf) format('truetype');
 }
 /*-------------------- #font# --------------------*/
-body{margin:0;padding:0كfont-family: "Ta3alamFont";}
 #ss-form input:focus ~ label,
 #ss-form textarea:focus ~ label,
 #ss-form input:valid ~ label,
@@ -22,10 +22,12 @@ body{margin:0;padding:0كfont-family: "Ta3alamFont";}
   transition: all 0.125s ease;
 }
 #ss-form .styled-input {
-  width: 97%;
-  margin: 2rem 0 1rem;
-  padding: 0;
-  position: relative;
+    width: 33.3333%;
+    margin: 15px 0px 1rem;
+    padding: 0;
+    position: relative;
+    float: right;
+    clear: both;
 }
 #ss-form .styled-input-in {
   position: relative;
@@ -40,7 +42,7 @@ body{margin:0;padding:0كfont-family: "Ta3alamFont";}
   transition: all 0.25s ease;
   pointer-events: none;
   line-height: 1;
-  font-family: "Helvetica", "Arial", sans-serif;
+font-family: "Ta3alamFont";
 }
 #ss-form .styled-input.wide {
   width: 100%;
@@ -55,14 +57,14 @@ body{margin:0;padding:0كfont-family: "Ta3alamFont";}
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  font-family: "Helvetica", "Arial", sans-serif;
+font-family: "Ta3alamFont";
 }
 #ss-form input ~ .span1,
 #ss-form textarea ~ .span1 {
   display: block;
   width: 0;
   height: 3px;
-  background: #4457c0;
+  background: #e8554e;
   position: absolute;
   left: 50%;
   -webkit-transition: width 0.4s ease-in-out;
@@ -73,7 +75,7 @@ body{margin:0;padding:0كfont-family: "Ta3alamFont";}
   display: block;
   width: 0;
   height: 3px;
-  background: #4457c0;
+  background: #e8554e;
   position: absolute;
   right: 50%;
   -webkit-transition: width 0.4s ease-in-out;
@@ -97,22 +99,22 @@ body{margin:0;padding:0كfont-family: "Ta3alamFont";}
   min-height: 15em;
 }
 #ss-form .btn {
-  font-family: "Helvetica", "Arial", sans-serif;
-  text-transform: uppercase;
-  font-size: 14px;
-  font-weight: bold;
-  letter-spacing: 1px;
-  border-radius: 0;
-  padding: 0 25px;
-  height: 51px;
-  line-height: 51px;
-  color: #333;
-  background-color: #fafafa;
-  border: 1px solid #ddd;
-  cursor: pointer;
-  background-image: none;
- display: block;
-margin: 0 auto;
+    font-family: "Ta3alamFont";
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-radius: 0;
+    padding: 0 25px;
+    height: 51px;
+    line-height: 51px;
+    color: #fff;
+    background-color: #e8554e;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    margin: 10px 0 0;
+    background-image: none;
+    float: left;
 }
 #ss-form .btn-default:hover,
 #ss-form .btn-default:focus {
@@ -195,13 +197,13 @@ function myFunction() {
                                 <span class="span1"></span><span class="span2"></span>
             </div>
           </div>  
-                            <div class="styled-input">
+                       <div class="styled-input wide">
                         <div class="styled-input-in">
-                <input type="text" aria-label="Name" name="entry.1267893399" value="" id="i.desc.1789170163" dir="auto" title="" required="required">
+                <textarea aria-label="رسالتك أو استفسارك	"  name="entry.1267893399" value="" id="i.desc.1789170163" rows="8" cols="0"  dir="auto" aria-required="true" required="required"></textarea>
                                 <label>رسالتك أو استفسارك</label>
                                 <span class="span1"></span><span class="span2"></span>
             </div>
-          </div>  
+          </div>
           <input name="draftResponse" type="hidden" value="[null,null,&quot;587164974650477901&quot;]">
                     <input name="pageHistory" type="hidden" value="0">
                     <input name="fbzx" type="hidden" value="587164974650477901">
