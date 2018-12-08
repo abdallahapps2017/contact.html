@@ -1,5 +1,4 @@
- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js" integrity="sha256-2Pjr1OlpZMY6qesJM68t2v39t+lMLvxwpa8QlRjJroA=" crossorigin="anonymous"></script>
+
 <div class='container'>
 <b:if cond="data:blog.pageType == &quot;static_page&quot; and data:blog.isMobileRequest == &quot;true&quot;">
 <style amp-custom="amp-custom">
@@ -15,6 +14,24 @@ url(https://dl.dropboxusercontent.com/s/gjkkuvnfze5ii1l/Ta3alamFont.woff) format
 url(https://dl.dropboxusercontent.com/s/mjj8mvkq7jgihhn/Ta3alamFont.ttf) format('truetype');
 }
 body{margin:0;padding:0}
+ .form-control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
 legend {text-align: right;font-family: Ta3alamFont;}
 fieldset {border: 1px solid #eee0;}
 .radioinput{float: right; width: auto !important; margin: 0 !important;}
