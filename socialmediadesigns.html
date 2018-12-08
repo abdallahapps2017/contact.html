@@ -1,3 +1,4 @@
+<div class='container'>
 <b:if cond="data:blog.pageType == &quot;static_page&quot; and data:blog.isMobileRequest == &quot;true&quot;">
 <style amp-custom="amp-custom">
 /*<![CDATA[*/
@@ -12,16 +13,8 @@ url(https://dl.dropboxusercontent.com/s/gjkkuvnfze5ii1l/Ta3alamFont.woff) format
 url(https://dl.dropboxusercontent.com/s/mjj8mvkq7jgihhn/Ta3alamFont.ttf) format('truetype');
 }
 body{margin:0;padding:0}
-#ss-form input:focus ~ label,
-#ss-form textarea:focus ~ label,
-#ss-form input:valid ~ label,
-#ss-form textarea:valid ~ label {
-  font-size: 0.75em;
-  color: #e8554e;
-  top: -2.25rem;
-  -webkit-transition: all 0.125s ease;
-  transition: all 0.125s ease;
-}
+
+.radioinput{float: right; width: auto !important; margin: 0 !important;}
 #ss-form .styled-input {
   width: 50.333%;
   margin: 2rem 0 1rem;
@@ -33,11 +26,10 @@ body{margin:0;padding:0}
   position: relative;
 }
 #ss-form .styled-input label {
-color: #999;
-    padding: 1rem;
+    color: #666;
+    font-size: 12px;
     position: absolute;
-    top: 4px;
-    right: 15px;
+    right: 22px;
     -webkit-transition: all 0.25s ease;
     transition: all 0.25s ease;
     pointer-events: none;
@@ -49,7 +41,8 @@ color: #999;
 }
 #ss-form input,
 #ss-form textarea {
-        border-radius: 15px;
+text-align: right;
+        border-radius: 5px;
   padding: 1rem 1rem;
   border: 1px solid #ddd;
   width: 100%;
@@ -172,35 +165,151 @@ function myFunction() {
 <form action="https://docs.google.com/forms/d/184jPKeKXPLUKW64tt5hfBemq1B6exNqwu3Z-GOFxI9Q/formResponse" id="ss-form" method="POST" onsubmit="fadeEffect.init('fade', 1);document.getElementById('fade').style.display = 'block'" target="hidden_iframe">
 
   <div class="styled-input">
-<div class="styled-input-in">                          
-  <input type="text" class="quantumWizTextinputPaperinputInput exportInput" jsname="YPqjbf" autocomplete="off" tabindex="0" aria-label="اسمك ثلاثي" id="i.err.1845431677" name="entry.668881638" value="" required="" dir="auto" data-initial-dir="auto" data-initial-value="" aria-invalid="true" placeholder='الاسم ثلاثي'/>
-                                <span class="span1"></span><span class="span2"></span>
+<div class="styled-input-in">
+<fieldset>
+      <legend for="1845431677">اسمك ثلاثي</legend>
+      <div class="form-group">
+          <input id="668881638" type="text" name="entry.668881638" class="form-control" required>
+      </div>
+  </fieldset>
             </div>
 </div>
-  
-  <div class="styled-input">
-<div class="styled-input-in">                          
-  <input type="email" id="i.err.1428179760" name="entry.240143364" autocomplete="email" tabindex="0" aria-label="مطلوب ملئ هذه الخانة" name="emailAddress" value="" required="" dir="auto" data-initial-dir="auto" data-initial-value="" aria-invalid="true" placeholder='بريدك الإلكتروني'/>
-                                <span class="span1"></span><span class="span2"></span>
+<div class="styled-input">
+<div class="styled-input-in">
+  <fieldset>
+       <legend for="1428179760">بريدك الإلكتروني</legend>
+       <div class="form-group">
+           <input id="240143364" type="text" name="entry.240143364" class="form-control" required>
+       </div>
+   </fieldset>
+          </div>
+</div>
+<div class="styled-input">
+<div class="styled-input-in">
+  <fieldset>
+       <legend for="705658717">النوع</legend>
+       <div class="form-group">
+           <div class="radio">
+               <label>
+                   <input type="radio" name="entry.848550646" value="ذكر" required>
+                   ذكر
+               </label>
+           </div>
+           <div class="radio">
+               <label>
+                   <input type="radio" name="entry.848550646" value="أنثى" required>
+                   أنثى
+               </label>
+           </div>
+       </div>
+   </fieldset>
+          </div>
+</div>
+<div class="styled-input">
+<div class="styled-input-in">
+  <fieldset>
+        <legend for="1396603804">رقم الهاتف</legend>
+        <div class="form-group">
+            <input id="500197296" type="text" name="entry.500197296" class="form-control" required>
+        </div>
+    </fieldset>
+          </div>
+</div>
+<div class="styled-input">
+<div class="styled-input-in">
+  <fieldset>
+       <legend for="237656392">رقم الواتساب</legend>
+       <div class="form-group">
+           <input id="631956121" type="text" name="entry.631956121" class="form-control" >
+       </div>
+   </fieldset>
+          </div>
+</div>
+<div class="styled-input">
+<div class="styled-input-in">
+  <fieldset>
+        <legend for="978714932">الدولة</legend>
+        <div class="form-group">
+            <select id="978714932" name="entry.702594441" class="form-control">
+                <option value="مصر">مصر</option>
+                <option value="الإمارات العربية المتحدة">الإمارات العربية المتحدة</option>
+                <option value="البحرين">البحرين</option>
+                <option value="الكويت">الكويت</option>
+                <option value="السعودية">السعودية</option>
+                <option value="عمان">عمان</option>
+                <option value="قطر">قطر</option>
+                <option value="اليمن">اليمن</option>
+                <option value="السودان">السودان</option>
+                <option value="ليبيا">ليبيا</option>
+                <option value="تونس">تونس</option>
+                <option value="الجزائر">الجزائر</option>
+                <option value="المغرب">المغرب</option>
+                <option value="موريتانيا">موريتانيا</option>
+                <option value="الصومال">الصومال</option>
+                <option value="جيبوتي">جيبوتي</option>
+                <option value="جزر القمر">جزر القمر</option>
+                <option value="الأردن">الأردن</option>
+                <option value="سوريا">سوريا</option>
+                <option value="لبنان">لبنان</option>
+                <option value="فلسطين">فلسطين</option>
+                <option value="العراق">العراق</option>
+            </select>
+        </div>
+    </fieldset>
+          </div>
+</div>
+<div class="styled-input">
+<div class="styled-input-in">
+  <fieldset>
+       <legend for="298366133">اسم الشركة او الجهة المراد التصميم لها</legend>
+       <div class="form-group">
+           <input id="1149170776" type="text" name="entry.1149170776" class="form-control" required>
+       </div>
+   </fieldset>
+          </div>
+</div>
+<div class="styled-input">
+<div class="styled-input-in">
+  <fieldset>
+        <legend for="808462875">نوع علاقتك بالشركة أو الجهة</legend>
+        <div class="form-group">
+            <div class="radio">
+                <label>
+                    <input type="radio" name="entry.726990196" value="المدير التنفيذي" required>
+                    المدير التنفيذي
+                </label>
             </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="entry.726990196" value="مدير مبيعات" required>
+                    مدير مبيعات
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="entry.726990196" value="مسوق إلكتروني" required>
+                    مسوق إلكتروني
+                </label>
+            </div>
+        </div>
+    </fieldset>
+          </div>
 </div>
-  <div class="styled-input">
-<div class="styled-input-in"> 
- <input type="radio" id="i.err.1827025414" name="entry.1579840220" value="ذكر"
-         checked>
-  <label for="ذكر">ذكر</label>
+<div class="styled-input">
+<div class="styled-input-in">
   
+          </div>
 </div>
-<input name="draftResponse" type="hidden" value="[null,null,&quot;9149338837867239679&quot;]" />
+<input name="draftResponse" type="hidden" value="[null,null,&quot;8822526586324956059&quot;]" />
                     <input name="pageHistory" type="hidden" value="0" />
-                    <input name="fbzx" type="hidden" value="9149338837867239679" />
+                    <input name="fbzx" type="hidden" value="8822526586324956059" />
           <button class="btn btn-default" name="submit" type="submit">تقديم طلب</button>
           </form>
 <div id="fade">
 <div class="thanks_layout">
 <div class="thanks_message">
 <img alt="Thumb" height="48" src="https://4.bp.blogspot.com/-rY5km74yj_I/V1ItqrbspBI/AAAAAAAAmxA/SK-aLPTjyuo8uiSYylRJ4tLslk2LJ581QCLcB/s1600/ic_thumb_up_black_24dp_2x.png" width="48" />
-        
+
 
 <h2>
 تم تقديم طلبك بنجاح</h2>
@@ -212,3 +321,5 @@ function myFunction() {
 </div>
 </div>
 </b:if>
+
+</div>
