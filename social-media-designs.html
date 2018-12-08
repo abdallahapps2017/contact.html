@@ -1,0 +1,360 @@
+
+<div class='container'>
+<b:if cond="data:blog.pageType == &quot;static_page&quot; and data:blog.isMobileRequest == &quot;true&quot;">
+<style amp-custom="amp-custom">
+/*<![CDATA[*/
+/*-------------------- font --------------------*/
+@font-face {
+font-family: "Ta3alamFont";
+font-weight: normal;
+font-style: normal;
+src: url(https://dl.dropboxusercontent.com/s/l0mqm6g2vwflxp2/Ta3alamFont.eot);
+src: url(https://dl.dropboxusercontent.com/s/l0mqm6g2vwflxp2/Ta3alamFont.eot?#iefix) format('embedded-opentype'),
+url(https://dl.dropboxusercontent.com/s/gjkkuvnfze5ii1l/Ta3alamFont.woff) format('woff'),
+url(https://dl.dropboxusercontent.com/s/mjj8mvkq7jgihhn/Ta3alamFont.ttf) format('truetype');
+}
+body{margin:0;padding:0}
+ .form-control {
+   direction: rtl;
+   display: block;
+   width: 100%;
+   height: 50px;
+   padding: 6px 12px;
+   font-size: 14px;
+   line-height: 1.42857143;
+   color: #555;
+   font-family: Ta3alamFont;
+   background-color: #fafafa;
+   background-image: none;
+   border: 1px solid #ccc;
+   border-radius: 4px;
+   -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+   box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+   -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+   -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+   transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+legend {text-align: right;font-family: Ta3alamFont;}
+fieldset {border: 1px solid #eee0;}
+.radioinput{float: right; width: auto !important; margin: 0 !important;}
+#ss-form .styled-input {
+  width: 50.333%;
+  margin: 2rem 0 1rem;
+  padding: 0;
+  position: relative;
+  float:right;
+}
+#ss-form .styled-input-in {
+  position: relative;
+}
+#ss-form .styled-input label {
+    color: #666;
+    font-size: 12px;
+    position: absolute;
+    right: 22px;
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+    line-height: 1;
+    font-family: Ta3alamFont;
+}
+#ss-form .styled-input.wide {
+  width: 100%;
+}
+#ss-form input,
+#ss-form textarea {
+  right: -20px;
+      top: 3px;
+      text-align: right;
+      border-radius: 5px;
+      padding: 1rem 1rem;
+      border: 1px solid #ddd;
+      font-size: 0.8rem;
+      background: #fafafa;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      font-family: Ta3alamFont;
+}
+#ss-form input ~ .span1,
+#ss-form textarea ~ .span1 {
+  display: block;
+  width: 0;
+  height: 3px;
+  background: #e8554e;
+  position: absolute;
+  left: 49%;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+.inputradio{
+  float: right;
+      display: inline-block;
+}
+.radio label p{
+  float: right;
+display: inline-block;
+margin-right: 10px;
+margin-top: 3px;
+}
+#ss-form input ~ .span2,
+#ss-form textarea ~ .span2 {
+  display: block;
+  width: 0;
+  height: 3px;
+  background: #e8554e;
+  position: absolute;
+  right: 49%;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+#ss-form input ~ span {
+  bottom: 0;
+}
+#ss-form input:focus,
+#ss-form textarea:focus {
+  outline: 0;
+}
+#ss-form input:focus ~ .span1,
+#ss-form textarea:focus ~ .span1,
+#ss-form input:focus ~ .span2,
+#ss-form textarea:focus ~ .span2 {
+  width: 50%;
+}
+#ss-form textarea {
+  width: 100%;
+  min-height: 15em;
+}
+#ss-form .btn {
+font-family: Ta3alamFont;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border-radius: 30px;
+  padding: 0 25px;
+  height: 51px;
+  line-height: 51px;
+  color: #FFF;
+  background-color: #E8554E;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  margin: 10px 0 0;
+  background-image: none;
+  float:left;
+}
+#ss-form .btn-default:hover,
+#ss-form .btn-default:focus {
+  background-color: #e8554e;
+  border: 1px solid #df4f49;
+  color: white;
+  outline: 0;
+}
+#fade {
+    opacity: 0;
+  display: none;
+}
+.thanks_layout{text-align: center; position: fixed; top:0; left:0; bottom:0; right:0; background:rgba(255,255,255,.8);z-index:99999}
+.thanks_message{font-family: Ta3alamFont;width:50%;background:#fff;border-radius:5px;padding:20px;border:1px solid #DEDEDE;text-align: center; color:#333; position: absolute; top: 10%; left: 50%;margin-left:-25%;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+.thanks_message .close a{position:absolute; top:-15px; right: -15px; width:20px; height:20px; line-height:20px; text-align:center; background:#fff; border:1px solid #ccc; border-radius:100%;color:#333;font-family: Ta3alamFont;font-size:18px;text-decoration:none}
+@media screen and (max-width:768px){.thanks_message{width:90%!important;margin-left:-45%!important;}
+}
+@media screen and (max-width:414px){#ss-form .styled-input {
+  width: 100%;
+}
+}
+</style>
+<script type="text/javascript">
+var submitted=false;
+var fadeEffect=function(){
+ return{
+  init:function(id, flag, target){
+   this.elem = document.getElementById(id);
+   clearInterval(this.elem.si);
+   this.target = target ? target : flag ? 100 : 0;
+   this.flag = flag || -1;
+   this.alpha = this.elem.style.opacity ? parseFloat(this.elem.style.opacity) * 100 : 0;
+   this.elem.si = setInterval(function(){fadeEffect.tween()}, 20);
+  },
+  tween:function(){
+   if(this.alpha == this.target){
+    clearInterval(this.elem.si);
+   }else{
+    var value = Math.round(this.alpha + ((this.target - this.alpha) * .05)) + (1 * this.flag);
+    this.elem.style.opacity = value / 100;
+    this.elem.style.filter = 'alpha(opacity=' + value + ')';
+    this.alpha = value
+   }
+  }
+ }
+}();
+function myFunction() {
+    location.reload();
+}
+</script>
+<iframe id="hidden_iframe" name="hidden_iframe" onload="if(submitted){);}" style="display: none;"></iframe>
+            </b:if>
+
+<form action="https://docs.google.com/forms/d/184jPKeKXPLUKW64tt5hfBemq1B6exNqwu3Z-GOFxI9Q/formResponse" id="ss-form" method="POST" onsubmit="fadeEffect.init('fade', 1);document.getElementById('fade').style.display = 'block'" target="hidden_iframe">
+
+  <div class="styled-input">
+<div class="styled-input-in">
+<fieldset>
+      <legend for="1845431677">(*)اسمك ثلاثي</legend>
+      <div class="form-group">
+          <input placeholder="ادخل اسمك الثلاثي" id="668881638" type="text" name="entry.668881638" class="form-control" required>
+      </div>
+  </fieldset>
+            </div>
+</div>
+<div class="styled-input">
+<div class="styled-input-in">
+  <fieldset>
+       <legend for="1428179760">(*)بريدك الإلكتروني</legend>
+       <div class="form-group">
+           <input placeholder="ادخل بريد إلكتروني صحيح" id="240143364" type="text" name="entry.240143364" class="form-control" required>
+       </div>
+   </fieldset>
+          </div>
+</div>
+<div class="styled-input">
+<div class="styled-input-in wide">
+  <fieldset>
+       <legend for="705658717">(*)النوع</legend>
+       <div class="form-group">
+           <div class="radio">
+               <label>
+                   <input class='inputradio' type="radio" name="entry.848550646" value="ذكر" required>
+                                    <p>ذكر</p>
+               </label>
+           </div>
+           <br>
+           <div class="radio">
+               <label>
+                   <input class='inputradio' type="radio" name="entry.848550646" value="أنثى" required>
+                                    <p>أنثى</p>
+               </label>
+           </div>
+       </div>
+   </fieldset>
+          </div>
+</div>
+<div class="styled-input">
+<div class="styled-input-in">
+  <fieldset>
+        <legend for="1396603804">(*)رقم الهاتف</legend>
+        <div class="form-group">
+            <input placeholder="ادخل رقم هاتفك مع مفتاح الدولة" id="500197296" type="text" name="entry.500197296" class="form-control" required>
+        </div>
+    </fieldset>
+          </div>
+</div>
+<div class="styled-input">
+<div class="styled-input-in">
+  <fieldset>
+       <legend for="237656392">رقم الواتساب</legend>
+       <div class="form-group">
+           <input placeholder="ادخل رقم واتساب في حالة لا يوجد اتركه فارغ" id="631956121" type="text" name="entry.631956121" class="form-control" >
+       </div>
+   </fieldset>
+          </div>
+</div>
+<div class="styled-input">
+<div class="styled-input-in wide">
+  <fieldset>
+        <legend for="978714932">(*)الدولة</legend>
+        <div class="form-group">
+            <select id="978714932" name="entry.702594441" class="form-control">
+                <option value="مصر">مصر</option>
+                <option value="الإمارات العربية المتحدة">الإمارات العربية المتحدة</option>
+                <option value="البحرين">البحرين</option>
+                <option value="الكويت">الكويت</option>
+                <option value="السعودية">السعودية</option>
+                <option value="عمان">عمان</option>
+                <option value="قطر">قطر</option>
+                <option value="اليمن">اليمن</option>
+                <option value="السودان">السودان</option>
+                <option value="ليبيا">ليبيا</option>
+                <option value="تونس">تونس</option>
+                <option value="الجزائر">الجزائر</option>
+                <option value="المغرب">المغرب</option>
+                <option value="موريتانيا">موريتانيا</option>
+                <option value="الصومال">الصومال</option>
+                <option value="جيبوتي">جيبوتي</option>
+                <option value="جزر القمر">جزر القمر</option>
+                <option value="الأردن">الأردن</option>
+                <option value="سوريا">سوريا</option>
+                <option value="لبنان">لبنان</option>
+                <option value="فلسطين">فلسطين</option>
+                <option value="العراق">العراق</option>
+            </select>
+        </div>
+    </fieldset>
+          </div>
+</div>
+<div class="styled-input">
+<div class="styled-input-in wide">
+  <fieldset>
+       <legend for="298366133">(*)اسم الشركة او الجهة المراد التصميم لها</legend>
+       <div class="form-group">
+           <input id="1149170776" type="text" name="entry.1149170776" class="form-control" required>
+       </div>
+   </fieldset>
+          </div>
+</div>
+<div class="styled-input">
+<div class="styled-input-in">
+  <fieldset>
+        <legend for="808462875">(*)نوع علاقتك بالشركة أو الجهة</legend>
+        <div class="form-group">
+            <div class="radio">
+                <label>
+                    <input class='inputradio' type="radio" name="entry.726990196" value="المدير التنفيذي" required>
+                                      <p>المدير التنفيذي</p>
+                </label>
+            </div>
+            <br>
+            <div class="radio">
+                <label>
+                    <input class='inputradio' type="radio" name="entry.726990196" value="مدير مبيعات" required>
+                                      <p>مدير مبيعات</p>
+                </label>
+            </div>
+            <br>
+            <div class="radio">
+                <label>
+                    <input class='inputradio' type="radio" name="entry.726990196" value="مسوق إلكتروني" required>
+                                      <p>مسوق إلكتروني</p>
+                </label>
+            </div>
+        </div>
+    </fieldset>
+          </div>
+</div>
+<div class="styled-input">
+<div class="styled-input-in">
+
+          </div>
+</div>
+<input name="draftResponse" type="hidden" value="[null,null,&quot;126794046746613296&quot;]" />
+                    <input name="pageHistory" type="hidden" value="0" />
+                    <input name="fbzx" type="hidden" value="126794046746613296" />
+          <button class="btn btn-default" name="submit" type="submit">تقديم طلب</button>
+          </form>
+<div id="fade">
+<div class="thanks_layout">
+<div class="thanks_message">
+<img alt="Thumb" height="48" src="https://4.bp.blogspot.com/-rY5km74yj_I/V1ItqrbspBI/AAAAAAAAmxA/SK-aLPTjyuo8uiSYylRJ4tLslk2LJ581QCLcB/s1600/ic_thumb_up_black_24dp_2x.png" width="48" />
+
+
+<h2>
+تم تقديم طلبك بنجاح</h2>
+<div>
+نشكرك علي ثقتك بنا, سيتم التواصل معك خلال 24 ساعه للبدء في تنفيذ تصميماتك.</div>
+<div class="close">
+<a href="javascript:void(0)" onclick="document.getElementById('fade').style.display = 'none' ;myFunction()" title="Close">×</a></div>
+</div>
+</div>
+</div>
+</b:if>
+
+</div>
