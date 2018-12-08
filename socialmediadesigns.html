@@ -86,6 +86,16 @@ fieldset {border: 1px solid #eee0;}
   -webkit-transition: width 0.4s ease-in-out;
   transition: width 0.4s ease-in-out;
 }
+.inputradio{
+  float: right;
+      display: inline-block;
+}
+.radio label p{
+  float: right;
+display: inline-block;
+margin-right: 10px;
+margin-top: 3px;
+}
 #ss-form input ~ .span2,
 #ss-form textarea ~ .span2 {
   display: block;
@@ -213,14 +223,14 @@ function myFunction() {
        <div class="form-group">
            <div class="radio">
                <label>
-                 <p>ذكر</p>
-                   <input type="radio" name="entry.848550646" value="ذكر" required>
+                   <input class='inputradio' type="radio" name="entry.848550646" value="ذكر" required>
+                                    <p>ذكر</p>
                </label>
            </div>
            <div class="radio">
                <label>
-                 <p>أنثى</p>
-                   <input type="radio" name="entry.848550646" value="أنثى" required>
+                   <input class='inputradio' type="radio" name="entry.848550646" value="أنثى" required>
+                                    <p>أنثى</p>
                </label>
            </div>
        </div>
@@ -297,20 +307,20 @@ function myFunction() {
         <div class="form-group">
             <div class="radio">
                 <label>
-                  <p>المدير التنفيذي</p>
                     <input type="radio" name="entry.726990196" value="المدير التنفيذي" required>
+                                      <p>المدير التنفيذي</p>
                 </label>
             </div>
             <div class="radio">
                 <label>
-                  <p>مدير مبيعات</p>
                     <input type="radio" name="entry.726990196" value="مدير مبيعات" required>
+                                      <p>مدير مبيعات</p>
                 </label>
             </div>
             <div class="radio">
                 <label>
-                  <p>مسوق إلكتروني</p>
                     <input type="radio" name="entry.726990196" value="مسوق إلكتروني" required>
+                                      <p>مسوق إلكتروني</p>
                 </label>
             </div>
         </div>
